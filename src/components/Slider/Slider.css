@@ -1,0 +1,32 @@
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
+.swiper__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.swiper__slide {
+  cursor: grab;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
