@@ -1,5 +1,5 @@
 .header {
-  padding: 50px 0 0 140px;
+  padding: 45px 0 0 130px;
   position: fixed;
   top: 0;
   z-index: 99;
@@ -8,19 +8,19 @@
 .header__container {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 44px;
 }
 
 .header__icon {
-  width: 45px;
-  height: 40px;
+  width: 48px;
+  height: 62px;
 }
 
 .header__text {
   margin: 0;
   color: #262626;
   font-weight: normal;
-  font-size: 29px;
+  font-size: 39px;
   letter-spacing: 3px;
   display: flex;
   align-items: center;

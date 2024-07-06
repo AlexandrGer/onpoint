@@ -1,0 +1,7 @@
+.App {
+  margin: 0 auto;
+  width: 2048px;
+  height: 1536px;
+  overflow: hidden;
+  position: relative;
+}

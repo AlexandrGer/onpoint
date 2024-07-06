@@ -1,17 +1,18 @@
 import "./App.css";
 import Header from "./components/Header/Header";
-import Slide from "./components/Slide/Slide";
 import Slide2 from "./components/Slide2/Slide2";
 import Slider from "./components/Slider/Slider";
+import SlideOne from "./components/SlideOne/SlideOne";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Slider>
-        <Slide />
+      <SlideOne />
+      {/* <Slider>
+	  <SlideOne />
         <Slide2 />
-      </Slider>
+      </Slider> */}
     </div>
   );
 }
