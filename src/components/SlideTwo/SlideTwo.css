@@ -81,6 +81,10 @@
   pointer-events: none;
 }
 
+.sperm_hidden {
+  opacity: 0;
+}
+
 .sperm_one,
 .sperm_two {
   top: 13%;

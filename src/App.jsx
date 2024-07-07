@@ -15,7 +15,7 @@ function App() {
       <Header handleSlide={setCurrentIndex} />
       <Slider activeSlide={currentIndex} handleSlide={setCurrentIndex}>
         <SlideOne handleSlide={setCurrentIndex} />
-        <SlideTwo />
+        <SlideTwo activeSlide={currentIndex} />
         <SlideThree />
       </Slider>
       <Footer />
