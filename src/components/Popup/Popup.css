@@ -9,7 +9,7 @@
   height: 1536px;
   top: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   background-color: rgba(22, 39, 62, 0.7);
   z-index: 2;
 }

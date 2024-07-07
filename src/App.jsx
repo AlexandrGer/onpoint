@@ -7,16 +7,16 @@ import SlideTwo from "./components/SlideTwo/SlideTwo";
 import { useState } from "react";
 
 function App() {
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <div className="App">
-      <Header handleSlide={setActiveSlide} />
+      <Header handleSlide={setCurrentIndex} />
       {/* <SlideOne /> */}
       {/* <SlideTwo /> */}
       {/* <SlideThree /> */}
-      <Slider activeSlide={activeSlide} handleSlide={setActiveSlide}>
-        <SlideOne handleSlide={setActiveSlide} />
+      <Slider activeSlide={currentIndex} handleSlide={setCurrentIndex}>
+        <SlideOne handleSlide={setCurrentIndex} />
         <SlideTwo />
         <SlideThree />
       </Slider>

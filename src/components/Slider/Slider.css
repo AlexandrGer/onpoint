@@ -16,6 +16,7 @@
   z-index: 1;
   display: flex;
   box-sizing: content-box;
+  transition: transform 0.5s ease-in-out;
 }
 
 .swiper__slide {
@@ -28,5 +29,5 @@
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
 }

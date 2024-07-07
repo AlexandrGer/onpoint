@@ -1,55 +1,39 @@
+import { useRef } from "react";
 import "./Slider.css";
 
 export default function Slider({ children, activeSlide, handleSlide }) {
-  let initialTouch;
-  let endTouch;
-  function swipe(e) {
-    if (e.type === "touchstart") {
-      initialTouch = e.changedTouches[0].clientX;
-    }
-    if (e.type === "touchend") {
-      endTouch = e.changedTouches[0].clientX;
-    }
-    if (initialTouch > endTouch) {
-      handleSlide(activeSlide + 1);
-      if (activeSlide === children.length - 1) {
-        handleSlide(0);
-      }
-    }
-    if (initialTouch < endTouch) {
-      if (activeSlide === 0) {
-        return;
-      }
-      handleSlide(activeSlide - 1);
-    }
-  }
+  const slides = Array.from(document.querySelectorAll(".swiper__slide"));
 
-  //   const sliders = Array.from(document.querySelectorAll(".swiper__slide"));
-  //   sliders.forEach((item) => {
-  //     // item.addEventListener("touchstart", function (evt) {
-  //     //   console.log(evt);
-  //     // });
-  //     item.addEventListener("touchmove", function (evt) {
-  //       console.log(evt);
-  //     });
-  //   });
+  const startX = useRef(0);
+
+  const handleTouchStart = (event) => {
+    startX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event) => {
+    const endX = event.changedTouches[0].clientX;
+    const diffX = endX - startX.current;
+
+    if (diffX > 30) {
+      handleSlide((prevIndex) => Math.max(prevIndex - 1, 0));
+    } else if (diffX < -30) {
+      handleSlide((prevIndex) => Math.min(prevIndex + 1, slides.length - 1));
+    }
+  };
 
   return (
     <div className="swiper">
-      <div className="swiper__wrapper">
+      <div
+        className="swiper__wrapper"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+      >
         {children.map((item, index) => (
-          <div
-            key={index}
-            className={`swiper__slide ${index !== activeSlide ? "hidden" : ""}`}
-            onTouchStart={(e) => swipe(e)}
-            onTouchEnd={(e) => swipe(e)}
-            props={activeSlide}
-          >
-            {/* {item} */}
+          <div key={index} className="swiper__slide">
             {item}
           </div>
         ))}
-        ;
       </div>
     </div>
   );
