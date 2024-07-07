@@ -16,27 +16,30 @@
 .scroll {
   position: relative;
   z-index: 1;
-  margin-top: 90px;
-}
-
-.text__container {
-  height: 890px;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  direction: rtl;
-  border-radius: 80px;
-  padding-left: 65px;
-  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
-}
-
-.text {
-  scroll-snap-align: start;
+  margin-top: 100px;
   width: 1550px;
-  margin: 0;
-  box-sizing: border-box;
+  height: 890px;
   border-radius: 80px;
   padding: 50px 150px 30px 65px;
   background: #fff;
+  box-sizing: border-box;
+  direction: rtl;
+  margin-left: 105px;
+  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+}
+
+.text__container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: content-box;
+  padding-left: 156px;
+}
+
+.text {
+  position: relative;
+  margin: 0;
+  margin-left: -40px;
   font-weight: normal;
   text-align: left;
   font-size: 44px;
@@ -44,14 +47,14 @@
   letter-spacing: 2px;
 }
 
-.test2 {
+.line {
   width: 10px;
-  height: 870px;
+  height: 790px;
   background-color: black;
   border-radius: 20px;
   position: absolute;
-  top: 7px;
-  left: 14px;
+  top: 63px;
+  left: -76px;
   z-index: -1;
 }
 
@@ -61,16 +64,18 @@
 
 .text__container::-webkit-scrollbar-thumb {
   height: 210px;
-  background-color: #cf578d;
+  background-color: rgb(241, 116, 173);
+  box-shadow: inset -18px -20px 20px 0 #cf578d;
   border-radius: 20px;
+  margin-bottom: 100px;
 }
 
-.text:after {
+.scroll:after {
   content: "";
   position: absolute;
   bottom: 0px;
-  left: 170px;
-  width: 80%;
+  left: 65px;
+  width: 85%;
   height: 40%;
   background: linear-gradient(transparent, white);
   pointer-events: none;

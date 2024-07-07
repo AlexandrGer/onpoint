@@ -71,7 +71,7 @@ export default function SlideTwo() {
               quis vel.
             </p>
           </div>
-          <div className="test2"></div>
+          <div className="line"></div>
         </div>
       </div>
       <img src={sperm_1} alt="sperm" className="sperm sperm_one" />

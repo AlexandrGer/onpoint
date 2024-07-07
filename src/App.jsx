@@ -1,10 +1,11 @@
-import "./App.css";
+import { useState } from "react";
 import Header from "./components/Header/Header";
 import Slider from "./components/Slider/Slider";
 import SlideOne from "./components/SlideOne/SlideOne";
 import SlideThree from "./components/SlideThree/SlideThree";
 import SlideTwo from "./components/SlideTwo/SlideTwo";
-import { useState } from "react";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,14 +13,12 @@ function App() {
   return (
     <div className="App">
       <Header handleSlide={setCurrentIndex} />
-      {/* <SlideOne /> */}
-      {/* <SlideTwo /> */}
-      {/* <SlideThree /> */}
       <Slider activeSlide={currentIndex} handleSlide={setCurrentIndex}>
         <SlideOne handleSlide={setCurrentIndex} />
         <SlideTwo />
         <SlideThree />
       </Slider>
+      <Footer />
     </div>
   );
 }
