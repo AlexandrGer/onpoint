@@ -48,6 +48,7 @@
   width: 10px;
   height: 870px;
   background-color: black;
+  border-radius: 20px;
   position: absolute;
   top: 7px;
   left: 14px;
@@ -73,4 +74,40 @@
   height: 40%;
   background: linear-gradient(transparent, white);
   pointer-events: none;
+}
+
+.sperm_one,
+.sperm_two {
+  top: 13%;
+  right: 0;
+  animation: ani 2.5s forwards;
+}
+
+.sperm_three {
+  top: 10%;
+  right: 0;
+  animation: ani 4s forwards;
+}
+
+.sperm_four {
+  top: 54%;
+  right: 0;
+  animation: ani 4.5s forwards;
+}
+
+.sperm_five {
+  top: 67%;
+  right: 0;
+  animation: ani 4s forwards;
+}
+
+@keyframes ani {
+  from {
+    opacity: 0;
+    transform: translate(100px, 100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }

@@ -1,18 +1,26 @@
 import "./App.css";
 import Header from "./components/Header/Header";
+import Slider from "./components/Slider/Slider";
 import SlideOne from "./components/SlideOne/SlideOne";
+import SlideThree from "./components/SlideThree/SlideThree";
 import SlideTwo from "./components/SlideTwo/SlideTwo";
+import { useState } from "react";
 
 function App() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  console.log(activeSlide);
+
   return (
     <div className="App">
-      <Header />
+      <Header handleSlide={setActiveSlide} />
       {/* <SlideOne /> */}
-      <SlideTwo />
-      {/* <Slider>
-	  <SlideOne />
-        <Slide2 />
-      </Slider> */}
+      {/* <SlideTwo /> */}
+      {/* <SlideThree /> */}
+      <Slider activeSlide={activeSlide} handleSlide={setActiveSlide}>
+        <SlideOne handleSlide={setActiveSlide} />
+        <SlideTwo />
+        <SlideThree />
+      </Slider>
     </div>
   );
 }

@@ -1,11 +1,14 @@
 .slide {
   width: 2048px;
   height: 1536px;
-  background-image: url("../../images/bg-1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+}
+
+.slide_one {
+  background-image: url("../../images/bg-1.png");
 }
 
 .slide__container {
@@ -33,6 +36,7 @@
   line-height: 234px;
   letter-spacing: 12px;
   position: relative;
+  z-index: 1;
 }
 
 span {
@@ -70,4 +74,73 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: -1px -2px 20px 0px rgb(23, 23, 23);
+}
+
+.sperm {
+  position: absolute;
+}
+
+.sperm_first {
+  z-index: 2;
+  top: 20%;
+  right: 0%;
+}
+
+.bakti {
+  position: absolute;
+}
+
+.bakti_one {
+  top: 66%;
+  left: 2%;
+  animation: diagonal 5s linear infinite alternate;
+}
+
+.bakti_two {
+  bottom: 0;
+  right: 25%;
+  animation: increase 5s linear infinite alternate;
+}
+
+.orbit {
+  position: absolute;
+  right: 5%;
+  top: 14%;
+  z-index: 3;
+  width: 400px;
+  height: 300px;
+  animation: spin 30s linear infinite;
+}
+
+.bakti_four {
+  top: 8%;
+  right: 21%;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+@keyframes diagonal {
+  to {
+    transform: translate(200px, 200px);
+  }
+}
+
+@keyframes increase {
+  to {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes diagonalAndIncrease {
+  from {
+    transform: scale(1.1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.2) translate(30px, 30px);
+  }
 }

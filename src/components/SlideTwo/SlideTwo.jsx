@@ -1,12 +1,17 @@
+import sperm_1 from "../../images/sperm_1.png";
+import sperm_2 from "../../images/sperm_2.png";
+import sperm_3 from "../../images/sperm_3.png";
+import sperm_4 from "../../images/sperm_4.png";
+import sperm_5 from "../../images/sperm_5.png";
 import "./SlideTwo.css";
 
 export default function SlideTwo() {
   return (
     <section className="slide slide_second">
       <div className="slide__container slide__container_second">
-        <p className="slide__title">
+        <h1 className="slide__title">
           ТЕКСТ <br /> СООБЩЕНИЯ
-        </p>
+        </h1>
         <div className="scroll">
           <div className="text__container">
             <p className="text">
@@ -69,6 +74,11 @@ export default function SlideTwo() {
           <div className="test2"></div>
         </div>
       </div>
+      <img src={sperm_1} alt="sperm" className="sperm sperm_one" />
+      <img src={sperm_2} alt="sperm" className="sperm sperm_two" />
+      <img src={sperm_3} alt="sperm" className="sperm sperm_three" />
+      <img src={sperm_4} alt="sperm" className="sperm sperm_four" />
+      <img src={sperm_5} alt="sperm" className="sperm sperm_five" />
     </section>
   );
 }
