@@ -8,7 +8,6 @@ import { useState } from "react";
 
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
-  console.log(activeSlide);
 
   return (
     <div className="App">

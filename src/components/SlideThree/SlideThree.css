@@ -15,7 +15,7 @@
   margin: 0;
   font-weight: 400;
   font-size: 190px;
-  line-height: 234px;
+  line-height: 1.2;
   letter-spacing: 19px;
 }
 
@@ -72,4 +72,71 @@
 
 .slide__container_three .button__icon {
   background-image: url("../../images/plus.png");
+}
+
+.bottle {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  z-index: 91;
+}
+
+.bubble {
+  position: absolute;
+}
+
+.bubble_1 {
+  bottom: 0;
+  left: 18%;
+  z-index: 92;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+.bubble_2 {
+  bottom: 15%;
+  left: 23.6%;
+  z-index: 90;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+.bubble_3 {
+  bottom: 18%;
+  left: 2.5%;
+  z-index: 92;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+.bubble_4 {
+  bottom: 36.5%;
+  left: 1%;
+  z-index: 92;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+.bubble_5 {
+  bottom: 44%;
+  left: 18%;
+  z-index: 90;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+.bubble_6 {
+  top: 28%;
+  left: 7.5%;
+  z-index: 90;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+.bubble_7 {
+  top: 20.5%;
+  left: 18%;
+  z-index: 92;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
+}
+
+.bubble_8 {
+  top: 9%;
+  left: 19%;
+  z-index: 90;
+  animation: diagonalAndIncrease 5s linear infinite alternate;
 }

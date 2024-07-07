@@ -1,8 +1,8 @@
-import bakti_1 from "../../images/bakti_1.png";
-import bakti_2 from "../../images/bakti_2.png";
-import bakti_3 from "../../images/bakti_3.png";
-import bakti_4 from "../../images/bakti_4.png";
-import sperm from "../../images/sperm.png";
+import bakti_1 from "../../images/bakti/bakti_1.png";
+import bakti_2 from "../../images/bakti/bakti_2.png";
+import bakti_3 from "../../images/bakti/bakti_3.png";
+import bakti_4 from "../../images/bakti/bakti_4.png";
+import sperm from "../../images/sperm/sperm.png";
 import "./SlideOne.css";
 
 export default function SlideOne({ handleSlide }) {

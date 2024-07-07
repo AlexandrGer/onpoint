@@ -1,8 +1,6 @@
-import { useState } from "react";
 import "./Slider.css";
 
 export default function Slider({ children, activeSlide, handleSlide }) {
-  //   const [activeSlide, setActiveSlide] = useState(0);
   let initialTouch;
   let endTouch;
   function swipe(e) {
@@ -25,6 +23,16 @@ export default function Slider({ children, activeSlide, handleSlide }) {
       handleSlide(activeSlide - 1);
     }
   }
+
+  //   const sliders = Array.from(document.querySelectorAll(".swiper__slide"));
+  //   sliders.forEach((item) => {
+  //     // item.addEventListener("touchstart", function (evt) {
+  //     //   console.log(evt);
+  //     // });
+  //     item.addEventListener("touchmove", function (evt) {
+  //       console.log(evt);
+  //     });
+  //   });
 
   return (
     <div className="swiper">

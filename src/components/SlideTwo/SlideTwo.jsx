@@ -1,8 +1,8 @@
-import sperm_1 from "../../images/sperm_1.png";
-import sperm_2 from "../../images/sperm_2.png";
-import sperm_3 from "../../images/sperm_3.png";
-import sperm_4 from "../../images/sperm_4.png";
-import sperm_5 from "../../images/sperm_5.png";
+import sperm_1 from "../../images/sperm/sperm_1.png";
+import sperm_2 from "../../images/sperm/sperm_2.png";
+import sperm_3 from "../../images/sperm/sperm_3.png";
+import sperm_4 from "../../images/sperm/sperm_4.png";
+import sperm_5 from "../../images/sperm/sperm_5.png";
 import "./SlideTwo.css";
 
 export default function SlideTwo() {
