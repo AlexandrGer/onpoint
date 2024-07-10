@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/onpoint/static/css/main.2b08c4d9.css",
-    "main.js": "/onpoint/static/js/main.250f8945.js",
+    "main.css": "/onpoint/static/css/main.12d6f9ee.css",
+    "main.js": "/onpoint/static/js/main.88462990.js",
     "static/js/453.1ca1c621.chunk.js": "/onpoint/static/js/453.1ca1c621.chunk.js",
     "static/media/bg-2.png": "/onpoint/static/media/bg-2.0d24626e6aa4a27812c9.png",
     "static/media/bg-1.png": "/onpoint/static/media/bg-1.1bcaf54d9ff2a37d191e.png",
@@ -29,12 +29,12 @@
     "static/media/bakti_4.png": "/onpoint/static/media/bakti_4.56a24bbbc71d404604fd.png",
     "index.html": "/onpoint/index.html",
     "static/media/homeIcon.svg": "/onpoint/static/media/homeIcon.89508eaa60fae36ec9ae85b10510e5b7.svg",
-    "main.2b08c4d9.css.map": "/onpoint/static/css/main.2b08c4d9.css.map",
-    "main.250f8945.js.map": "/onpoint/static/js/main.250f8945.js.map",
+    "main.12d6f9ee.css.map": "/onpoint/static/css/main.12d6f9ee.css.map",
+    "main.88462990.js.map": "/onpoint/static/js/main.88462990.js.map",
     "453.1ca1c621.chunk.js.map": "/onpoint/static/js/453.1ca1c621.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b08c4d9.css",
-    "static/js/main.250f8945.js"
+    "static/css/main.12d6f9ee.css",
+    "static/js/main.88462990.js"
   ]
 }
