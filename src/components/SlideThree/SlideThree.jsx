@@ -40,16 +40,17 @@ export default function SlideThree() {
           <span className="button__icon"></span>Подробнее
         </button>
       </div>
-      <img src={bottle} alt="bottle" className="bottle" />
-      <img src={bubble_1} alt="bubble" className="bubble bubble_1" />
+
+      <Popup active={active} onClose={setActive} />
       <img src={bubble_2} alt="bubble" className="bubble bubble_2" />
-      <img src={bubble_3} alt="bubble" className="bubble bubble_3" />
-      <img src={bubble_4} alt="bubble" className="bubble bubble_4" />
       <img src={bubble_5} alt="bubble" className="bubble bubble_5" />
       <img src={bubble_6} alt="bubble" className="bubble bubble_6" />
-      <img src={bubble_7} alt="bubble" className="bubble bubble_7" />
       <img src={bubble_8} alt="bubble" className="bubble bubble_8" />
-      <Popup active={active} onClose={setActive} />
+      <img src={bottle} alt="bottle" className="bottle" />
+      <img src={bubble_1} alt="bubble" className="bubble bubble_1" />
+      <img src={bubble_3} alt="bubble" className="bubble bubble_3" />
+      <img src={bubble_4} alt="bubble" className="bubble bubble_4" />
+      <img src={bubble_7} alt="bubble" className="bubble bubble_7" />
     </section>
   );
 }
