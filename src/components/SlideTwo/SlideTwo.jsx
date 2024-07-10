@@ -7,12 +7,39 @@ import "./SlideTwo.css";
 
 export default function SlideTwo({ activeSlide }) {
   const atimation = activeSlide === 1 ? true : false;
+
   return (
     <section className="slide slide_second">
+      <img
+        src={sperm_1}
+        alt="sperm"
+        className={atimation ? "sperm sperm_one" : "sperm sperm_hidden"}
+      />
+      <img
+        src={sperm_2}
+        alt="sperm"
+        className={atimation ? "sperm sperm_two" : "sperm sperm_hidden"}
+      />
+      <img
+        src={sperm_3}
+        alt="sperm"
+        className={atimation ? "sperm sperm_three" : "sperm sperm_hidden"}
+      />
+      <img
+        src={sperm_4}
+        alt="sperm"
+        className={atimation ? "sperm sperm_four" : "sperm sperm_hidden"}
+      />
+      <img
+        src={sperm_5}
+        alt="sperm"
+        className={atimation ? "sperm sperm_five" : "sperm sperm_hidden"}
+      />
       <div className="slide__container slide__container_second">
         <h1 className="slide__title">
           ТЕКСТ <br /> СООБЩЕНИЯ
         </h1>
+
         <div className="scroll">
           <div className="text__container">
             <p className="text">
@@ -72,34 +99,8 @@ export default function SlideTwo({ activeSlide }) {
               quis vel.
             </p>
           </div>
-          <div className="line"></div>
         </div>
       </div>
-      <img
-        src={sperm_1}
-        alt="sperm"
-        className={atimation ? "sperm sperm_one" : "sperm sperm_hidden"}
-      />
-      <img
-        src={sperm_2}
-        alt="sperm"
-        className={atimation ? "sperm sperm_two" : "sperm sperm_hidden"}
-      />
-      <img
-        src={sperm_3}
-        alt="sperm"
-        className={atimation ? "sperm sperm_three" : "sperm sperm_hidden"}
-      />
-      <img
-        src={sperm_4}
-        alt="sperm"
-        className={atimation ? "sperm sperm_four" : "sperm sperm_hidden"}
-      />
-      <img
-        src={sperm_5}
-        alt="sperm"
-        className={atimation ? "sperm sperm_five" : "sperm sperm_hidden"}
-      />
     </section>
   );
 }

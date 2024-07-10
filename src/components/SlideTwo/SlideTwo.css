@@ -5,12 +5,7 @@
 .slide__container_second {
   gap: unset;
   margin-top: 90px;
-}
-
-.slide__title {
-  margin: 0;
-  font-weight: 400;
-  font-size: 54px;
+  position: relative;
 }
 
 .scroll {
@@ -26,6 +21,30 @@
   direction: rtl;
   margin-left: 105px;
   box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+}
+
+.scroll::before {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 790px;
+  background-color: black;
+  border-radius: 20px;
+  position: absolute;
+  top: 63px;
+  left: -76px;
+  z-index: -1;
+}
+
+.scroll::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 65px;
+  width: 85%;
+  height: 40%;
+  background: linear-gradient(transparent, white);
+  pointer-events: none;
 }
 
 .text__container {
@@ -47,17 +66,6 @@
   letter-spacing: 2px;
 }
 
-.line {
-  width: 10px;
-  height: 790px;
-  background-color: black;
-  border-radius: 20px;
-  position: absolute;
-  top: 63px;
-  left: -76px;
-  z-index: -1;
-}
-
 .text__container::-webkit-scrollbar {
   width: 40px;
 }
@@ -68,17 +76,6 @@
   box-shadow: inset -18px -20px 20px 0 #cf578d;
   border-radius: 20px;
   margin-bottom: 100px;
-}
-
-.scroll:after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 65px;
-  width: 85%;
-  height: 40%;
-  background: linear-gradient(transparent, white);
-  pointer-events: none;
 }
 
 .sperm_hidden {
