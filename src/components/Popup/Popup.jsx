@@ -1,9 +1,50 @@
 import { useState } from "react";
 import "./Popup.css";
 
+const list = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  "Faucibus pulvinar elementum integer enim",
+  "Faucibus pulvinar elementum integer enim",
+  "Mi bibendum neque egestas congue quisque egestas diam",
+  "Venenatis lectus magna fringilla urna",
+  "Venenatis lectus magna fringilla urna",
+  "Bla bla bla",
+  "Faucibus pulvinar elementum integer enim",
+  "Faucibus pulvinar elementum integer enim",
+  "Faucibus pulvinar elementum integer enim",
+  "Faucibus pulvinar elementum integer enim",
+  "Faucibus pulvinar elementum integer enim",
+];
+
+const chunkArray = (array, size) => {
+  const modifiedArray = array.map((item, index) => {
+    return {
+      index: index + 1,
+      item: item,
+    };
+  });
+  const result = [];
+  for (let i = 0; i < modifiedArray.length; i += size) {
+    result.push(modifiedArray.slice(i, i + size));
+  }
+  return result;
+};
+
 export default function Popup({ active, onClose }) {
-  const [activeCircle, setActiveCircle] = useState(true);
-  const [activeList, setActiveList] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const advantageChunks = chunkArray(list, 3);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % advantageChunks.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + advantageChunks.length) % advantageChunks.length
+    );
+  };
 
   function handleClosePopup() {
     onClose(false);
@@ -23,73 +64,37 @@ export default function Popup({ active, onClose }) {
           <p className="slide__subtitle slide__subtitle_three">
             BREND <span>XY</span>
           </p>
-          <ul
-            className={
-              activeList ? "popup__items popup__items_active" : "popup__items"
-            }
-          >
-            <li className="popup__item">
-              <span>01</span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </li>
-            <li className="popup__item">
-              <span>02</span>
-              <p>Faucibus pulvinar elementum integer enim</p>
-            </li>
-            <li className="popup__item">
-              <span>03</span>
-              <p>Faucibus pulvinar elementum integer enim</p>
-            </li>
-          </ul>
-          <ul
-            className={
-              !activeList ? "popup__items popup__items_active" : "popup__items"
-            }
-          >
-            <li className="popup__item">
-              <span>04</span>
-              <p>Mi bibendum neque egestas congue quisque egestas diam</p>
-            </li>
-            <li className="popup__item">
-              <span>05</span>
-              <p>Venenatis lectus magna fringilla urna</p>
-            </li>
-            <li className="popup__item">
-              <span>06</span>
-              <p>Venenatis lectus magna fringilla urna</p>
-            </li>
+          <ul className="popup__items">
+            {advantageChunks[currentIndex].map((advantage, index) => (
+              <li className="popup__item" key={index}>
+                {advantage.index < 10 ? (
+                  <span>0{advantage.index}</span>
+                ) : (
+                  <span>{advantage.index}</span>
+                )}
+                <p>{advantage.item}</p>
+              </li>
+            ))}
           </ul>
           <div className="buttons">
-            <button
-              className="button_prev"
-              onClick={() => {
-                setActiveList(true);
-                setActiveCircle(true);
-              }}
-            ></button>
+            <button className="button_prev" onClick={prevSlide}></button>
             <div className="circles">
-              <div
-                className={activeCircle ? "circle circle_active" : "circle"}
-              ></div>
-              <div
-                className={!activeCircle ? "circle circle_active" : "circle"}
-              ></div>
+              {advantageChunks.map((product, index) => (
+                <div
+                  key={index}
+                  className={
+                    currentIndex === index ? "circle circle_active" : "circle"
+                  }
+                ></div>
+              ))}
             </div>
-            <button
-              className="button_next"
-              onClick={() => {
-                setActiveList(false);
-                setActiveCircle(false);
-              }}
-            ></button>
+            <button className="button_next" onClick={nextSlide}></button>
           </div>
         </div>
         <button
           className="button_close"
           onClick={() => {
             handleClosePopup();
-            setActiveCircle(true);
-            setActiveList(true);
           }}
         ></button>
       </div>
