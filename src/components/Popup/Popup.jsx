@@ -17,16 +17,19 @@ const list = [
 ];
 
 const chunkArray = (array, size) => {
+  const result = [];
+
   const modifiedArray = array.map((item, index) => {
     return {
       index: index + 1,
       item: item,
     };
   });
-  const result = [];
+
   for (let i = 0; i < modifiedArray.length; i += size) {
     result.push(modifiedArray.slice(i, i + size));
   }
+
   return result;
 };
 
@@ -95,6 +98,7 @@ export default function Popup({ active, onClose }) {
           className="button_close"
           onClick={() => {
             handleClosePopup();
+            setCurrentIndex(0);
           }}
         ></button>
       </div>
