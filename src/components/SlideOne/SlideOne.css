@@ -36,7 +36,6 @@
   line-height: 234px;
   letter-spacing: 12px;
   position: relative;
-  z-index: 1;
 }
 
 span {
@@ -81,7 +80,6 @@ span {
 }
 
 .sperm_first {
-  z-index: 2;
   top: 20%;
   right: 0%;
 }
@@ -106,7 +104,6 @@ span {
   position: absolute;
   right: 5%;
   top: 14%;
-  z-index: 3;
   width: 400px;
   height: 300px;
   animation: spin 30s linear infinite;

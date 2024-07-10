@@ -12,6 +12,7 @@ export default function SlideOne({ handleSlide }) {
 
   return (
     <section className="slide slide_one">
+      <img src={bakti_1} alt="bakti" className="bakti bakti_one" />
       <div className="slide__container">
         <h1 className="slide__title">ПРИВЕТ,</h1>
         <p className="slide__subtitle">
@@ -21,13 +22,12 @@ export default function SlideOne({ handleSlide }) {
           </button>
         </p>
       </div>
-      <img src={bakti_1} alt="bakti" className="bakti bakti_one" />
+      <img src={sperm} alt="sperm" className="sperm sperm_first" />
       <img src={bakti_2} alt="bakti" className="bakti bakti_two" />
+      <img src={bakti_4} alt="bakti" className="bakti bakti_four" />
       <div className="orbit">
         <img src={bakti_3} alt="bakti" className="bakti bakti_three" />
       </div>
-      <img src={bakti_4} alt="bakti" className="bakti bakti_four" />
-      <img src={sperm} alt="sperm" className="sperm sperm_first" />
     </section>
   );
 }
