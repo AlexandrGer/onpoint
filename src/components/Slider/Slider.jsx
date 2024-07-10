@@ -2,8 +2,6 @@ import { useRef } from "react";
 import "./Slider.css";
 
 export default function Slider({ children, activeSlide, handleSlide }) {
-  const slides = Array.from(document.querySelectorAll(".swiper__slide"));
-
   const startX = useRef(0);
 
   const handleTouchStart = (event) => {
@@ -17,7 +15,7 @@ export default function Slider({ children, activeSlide, handleSlide }) {
     if (diffX > 30) {
       handleSlide((prevIndex) => Math.max(prevIndex - 1, 0));
     } else if (diffX < -30) {
-      handleSlide((prevIndex) => Math.min(prevIndex + 1, slides.length - 1));
+      handleSlide((prevIndex) => Math.min(prevIndex + 1, children.length - 1));
     }
   };
 
